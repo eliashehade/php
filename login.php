@@ -3,7 +3,7 @@ session_start();
 
 // Function to generate a random CSRF token
 function generateCSRFToken() {
-    return bin2hex(random_bytes(32));
+    return uniqid("",true);
 }
 
 if (!isset($_SESSION["csrf_token"])) {
